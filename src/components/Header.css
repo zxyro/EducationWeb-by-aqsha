@@ -1,0 +1,47 @@
+.header {
+    background-image: url('Download-Education-HD-Backgrounds.jpg'); /* Ganti dengan path gambar Anda */
+    background-size: cover; /* Menyesuaikan ukuran gambar */
+    background-position: center; /* Menempatkan gambar di tengah */
+    color: white; /* Warna teks */
+    padding: 20px 0; /* Ruang atas dan bawah */
+    text-align: center; /* Rata tengah */
+    position: relative; /* Agar elemen anak dapat diposisikan relatif */
+    overflow: hidden; /* Menyembunyikan elemen yang melampaui */
+  }
+  
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; /* Menggunakan gambar latar belakang yang sama */
+    background-size: cover; /* Menyesuaikan ukuran gambar */
+    background-position: center; /* Menempatkan gambar di tengah */
+    filter: blur(2px); /* Mengatur tingkat blur */
+    z-index: 0; /* Mengatur z-index agar berada di belakang teks */
+  }
+  
+  .header h1,
+  .header nav {
+    position: relative; /* Agar teks tetap di atas blur */
+    z-index: 1; /* Mengatur z-index agar di atas elemen blur */
+  }
+  
+  
+  .header nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .header nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
